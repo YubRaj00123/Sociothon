@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartViz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div id="loader-section">
+            <div class="loader">
+                <svg height="0" width="0" viewBox="0 0 64 64" class="absolute">
+                    <defs>
+                        <linearGradient id="b" gradientUnits="userSpaceOnUse" y2="2" x2="0" y1="62" x1="0">
+                            <stop stop-color="#973BED"></stop>
+                            <stop stop-color="#007CFF" offset="1"></stop>
+                        </linearGradient>
+                        <linearGradient id="c" gradientUnits="userSpaceOnUse" y2="0" x2="0" y1="64" x1="0">
+                            <stop stop-color="#FFC800"></stop>
+                            <stop stop-color="#F0F" offset="1"></stop>
+                        </linearGradient>
+                        <linearGradient id="d" gradientUnits="userSpaceOnUse" y2="2" x2="0" y1="62" x1="0">
+                            <stop stop-color="#00E0ED"></stop>
+                            <stop stop-color="#00DA72" offset="1"></stop>
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+                <!-- P -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="64" width="64" class="inline-block">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" stroke="url(#b)"
+                          d="M 4 60 V 4 H 32 C 50 4 50 32 32 32 H 4"
+                          class="dash" pathLength="360"></path>
+                </svg>
+                <div class="w-2"></div>
+
+                <!-- U -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="64" width="64" class="inline-block">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" stroke="url(#c)"
+                          d="M 4 4 V 48 C 4 60 60 60 60 48 V 4"
+                          class="dash" pathLength="360"></path>
+                </svg>
+                <div class="w-2"></div>
+
+                <!-- T -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="64" width="64" class="inline-block">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" stroke="url(#d)"
+                          d="M 4 4 H 60 M 32 4 V 60"
+                          class="dash" pathLength="360"></path>
+                </svg>
+                <div class="w-2"></div>
+
+                <!-- I -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="64" width="64" class="inline-block">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" stroke="url(#b)"
+                          d="M 16 4 H 48 M 32 4 V 60 M 16 60 H 48"
+                          class="dash" pathLength="360"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div id="main-content" style="display: none;">
+            <div class="wrapper">
+                <div class="title">
+                    Login Form
+                </div>
+                <form id="loginForm">
+                    <div class="field">
+                        <input type="text" id="email" required>
+                        <label>Email Address</label>
+                    </div>
+                    <div class="field">
+                        <input type="password" id="password" required>
+                        <label>Password</label>
+                        <i class="fas fa-eye password-toggle"></i>
+                    </div>
+                    <div class="content">
+                        <div class="checkbox">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <div class="pass-link">
+                            <a href="#">Forgot password?</a>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <input type="submit" value="Login">
+                    </div>
+                    <div class="signup-link">
+                        Not a member? <a href="#">Signup now</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="dark-mode-toggle">
+            <input type="checkbox" id="darkModeToggle" class="toggle-checkbox">
+            <label for="darkModeToggle" class="toggle-label">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+                <span class="toggle-ball"></span>
+            </label>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
